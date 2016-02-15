@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+/* General styles
+    (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+body {}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+
+
+/* Header styles
+    (all the styles inside the < header > or < nav > tags)
+*/
+
+
+/* Content styles
+*/
+
+.produce-btn,
+.bakery-btn,
+.meat-btn,
+.dairy-btn,
+.pantry-btn,
+.add-items {
+    width: 200px;
+    margin-bottom: 5px;
+    background-color: white;
+}
+
+
+.produce-btn,
+.bakery-btn,
+.meat-btn,
+.dairy-btn,
+.pantry-btn {
+    padding: 20px;
+    font-size: 24px;
+    border: 2px solid black;
+    text-transform: uppercase;
+}
+
+.add-items {
+    padding: 10px;
+    border: 2px dotted black;
+    text-align: left;
+}
+
+
+/* Footer styles
+    (all the styles inside the < footer > tag)
+*/
+
+
+/* Responsive styles
+    (the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+*/
