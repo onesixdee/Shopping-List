@@ -9,7 +9,10 @@ $(document).ready(function() {
 
 	$('#add-produce-item').keypress(function(event) {
 		if(event.which == 13) {
+			var newItem = $(this).val();
 			$('.item-entered').show();
+			$('p').text(newItem);
+
 		}
 	});
 
