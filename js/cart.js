@@ -2,11 +2,17 @@ $(document).ready(function() {
 	$('.add-item').hide();
 	$('.item-entered').hide();
 
-
 	$('.produce-btn').click(function() {
 		$(this).css({"background-color": "#000", "color": "#fff"});
 		$('#add-produce-item').slideToggle();
 	});
+
+	$('#add-produce-item').keypress(function(event) {
+		if(event.which == 13) {
+			$('.item-entered').show();
+		}
+	});
+
 	$('.bakery-btn').click(function() {
 			$(this).css({"background-color": "#000", "color": "#fff"});
 			$('#add-bakery-item').slideToggle();
@@ -24,7 +30,6 @@ $(document).ready(function() {
 			$('#add-pantry-item').slideToggle();
 	});
 
-
 }); //document ready end
 
 
@@ -33,13 +38,7 @@ $(document).ready(function() {
 // return value in input ID beneath this input with a checkbox in .item-entered
 
 
-
-
-
 // remove all text in input / clear
 
 
 
-
-
-	
