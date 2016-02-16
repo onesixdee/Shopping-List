@@ -1,47 +1,58 @@
 $(document).ready(function() {
 	$('.add-item').hide();
 	$('.item-entered').hide();
+	$('button').addClass('btn-unclicked');
 
 	$('.produce-btn').click(function() {
-		$(this).css({"background-color": "#000", "color": "#fff"});
+		$(this).addClass('btn-clicked');
 		$('#add-produce-item').slideToggle();
 	});
 
+// value and checkbox displayed
 	$('#add-produce-item').keypress(function(event) {
 		if(event.which == 13) {
 			var newItem = $(this).val();
 			$('.item-entered').show();
 			$('p').text(newItem);
-
 		}
 	});
 
 	$('.bakery-btn').click(function() {
-			$(this).css({"background-color": "#000", "color": "#fff"});
+			$(this).removeClass('btn-unclicked');
+			$(this).addClass('btn-clicked');
 			$('#add-bakery-item').slideToggle();
 	});
 	$('.meat-btn').click(function() {
-			$(this).css({"background-color": "#000", "color": "#fff"});
+			$(this).removeClass('btn-unclicked');
+			$(this).addClass('btn-clicked');
 			$('#add-meat-item').slideToggle();
 	});
 	$('.dairy-btn').click(function() {
-			$(this).css({"background-color": "#000", "color": "#fff"});
+			$(this).removeClass('btn-unclicked');
+			$(this).addClass('btn-clicked');
 			$('#add-dairy-item').slideToggle();
 	});
 	$('.pantry-btn').click(function() {
-			$(this).css({"background-color": "#000", "color": "#fff"});
+			$(this).removeClass('btn-unclicked');
+			$(this).addClass('btn-clicked');
 			$('#add-pantry-item').slideToggle();
 	});
 
 }); //document ready end
 
 
+
+
+
+
+
 // change css back to white background and black text when button is closed
 
-// return value in input ID beneath this input with a checkbox in .item-entered
-
+// slide toggle for item entered
 
 // remove all text in input / clear
+
+// value in item entered inside <p> needs to be inside of <input> (float left?)
 
 
 

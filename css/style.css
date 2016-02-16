@@ -68,7 +68,15 @@ h1 {
     border: 2px dotted #000;
 }
 
+.btn-clicked {
+    background-color: #fff;
+    color: #000;
+}
 
+.btn-clicked {
+    background-color: #000;
+    color: #fff;
+}
 
 
 /* Footer styles
