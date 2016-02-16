@@ -1,16 +1,45 @@
 $(document).ready(function() {
-	$('.add-items').hide();
+	$('.add-item').hide();
+	$('.item-entered').hide();
 
 
-//Toggle list on click of Produce button
-	$('.categories').on('click', '.produce-btn', function() {
-		$('.produce-btn').css('background-color', 'black').css('color', 'white');
-		$('.add-items').slideToggle();
-
+	$('.produce-btn').click(function() {
+		$(this).css({"background-color": "#000", "color": "#fff"});
+		$('#add-produce-item').slideToggle();
 	});
-}); //document ready
+	$('.bakery-btn').click(function() {
+			$(this).css({"background-color": "#000", "color": "#fff"});
+			$('#add-bakery-item').slideToggle();
+	});
+	$('.meat-btn').click(function() {
+			$(this).css({"background-color": "#000", "color": "#fff"});
+			$('#add-meat-item').slideToggle();
+	});
+	$('.dairy-btn').click(function() {
+			$(this).css({"background-color": "#000", "color": "#fff"});
+			$('#add-dairy-item').slideToggle();
+	});
+	$('.pantry-btn').click(function() {
+			$(this).css({"background-color": "#000", "color": "#fff"});
+			$('#add-pantry-item').slideToggle();
+	});
 
-	$('.add-items').on('click', function() {
-		$('.add-items').after('<li><button>add item</button></li>');
 
-})
+}); //document ready end
+
+
+// change css back to white background and black text when button is closed
+
+// return value in input ID beneath this input with a checkbox in .item-entered
+
+
+
+
+
+// remove all text in input / clear
+
+
+
+
+
+	
