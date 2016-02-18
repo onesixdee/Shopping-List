@@ -1,10 +1,32 @@
+
+	
 $(document).ready(function() {
+
 	$('.add-item').hide();
 	$('.item-entered').hide();
-	$('button').addClass('btn-unclicked');
+
+
+// Button CSS Style Change when CLicked
+	function buttonStyle() {
+	    var button = $('.produce-btn');
+	    if (button.hasClass('btn-clicked')) {
+	        button.removeClass('btn-clicked').addClass('btn-unclicked');
+	    }
+	    else if (button.hasClass('btn-unclicked')) {
+	        button.removeClass('btn-unclicked').addClass('btn-clicked');
+	    }
+	      else {
+	        button.addClass('btn-unclicked');
+	    }
+	};
+
+	 $('.produce-btn').click(function() {
+        buttonStyle();
+    });
+
+
 
 	$('.produce-btn').click(function() {
-		$(this).addClass('btn-clicked');
 		$('#add-produce-item').slideToggle();
 	});
 
@@ -38,10 +60,12 @@ $(document).ready(function() {
 			$('#add-pantry-item').slideToggle();
 	});
 
+
 }); //document ready end
 
 
 
+   
 
 
 
