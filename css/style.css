@@ -78,6 +78,9 @@ h1 {
     color: #fff;
 }
 
+p {
+    display: inline;
+}
 
 /* Footer styles
     (all the styles inside the < footer > tag)

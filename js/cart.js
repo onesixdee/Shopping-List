@@ -6,7 +6,7 @@ $(document).ready(function() {
 	$('.item-entered').hide();
 
 
-// Button CSS Style Change when CLicked
+// button CSS style change when clicked
 	function buttonStyle() {
 	    var button = $('.produce-btn');
 	    if (button.hasClass('btn-clicked')) {
@@ -25,12 +25,34 @@ $(document).ready(function() {
     });
 
 
-
+// slidetoggle of Add Items
 	$('.produce-btn').click(function() {
 		$('#add-produce-item').slideToggle();
 	});
 
-// value and checkbox displayed
+	$('.bakery-btn').click(function() {
+			// $(this).removeClass('btn-unclicked');
+			// $(this).addClass('btn-clicked');
+			$('#add-bakery-item').slideToggle();
+	});
+	$('.meat-btn').click(function() {
+			// $(this).removeClass('btn-unclicked');
+			// $(this).addClass('btn-clicked');
+			$('#add-meat-item').slideToggle();
+	});
+	$('.dairy-btn').click(function() {
+			// $(this).removeClass('btn-unclicked');
+			// $(this).addClass('btn-clicked');
+			$('#add-dairy-item').slideToggle();
+	});
+	$('.pantry-btn').click(function() {
+			// $(this).removeClass('btn-unclicked');
+			// $(this).addClass('btn-clicked');
+			$('#add-pantry-item').slideToggle();
+	});
+
+
+// value of input and checkbox displayed
 	$('#add-produce-item').keypress(function(event) {
 		if(event.which == 13) {
 			var newItem = $(this).val();
@@ -38,28 +60,6 @@ $(document).ready(function() {
 			$('p').text(newItem);
 		}
 	});
-
-	$('.bakery-btn').click(function() {
-			$(this).removeClass('btn-unclicked');
-			$(this).addClass('btn-clicked');
-			$('#add-bakery-item').slideToggle();
-	});
-	$('.meat-btn').click(function() {
-			$(this).removeClass('btn-unclicked');
-			$(this).addClass('btn-clicked');
-			$('#add-meat-item').slideToggle();
-	});
-	$('.dairy-btn').click(function() {
-			$(this).removeClass('btn-unclicked');
-			$(this).addClass('btn-clicked');
-			$('#add-dairy-item').slideToggle();
-	});
-	$('.pantry-btn').click(function() {
-			$(this).removeClass('btn-unclicked');
-			$(this).addClass('btn-clicked');
-			$('#add-pantry-item').slideToggle();
-	});
-
 
 }); //document ready end
 
