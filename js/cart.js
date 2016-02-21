@@ -1,9 +1,7 @@
 
 	
 $(document).ready(function() {
-
 	$('.add-item').hide();
-	$('.item-entered').hide();
 
 
 	
@@ -22,17 +20,7 @@ $(document).ready(function() {
 
  
 
-
-
-
-
-
-
-
-
-
-
-//slidetoggle of Add Items
+//slide toggle add item
 	$('.produce-btn').click(function() {
 		$('#add-produce-item').slideToggle();
 	});
@@ -45,18 +33,17 @@ $(document).ready(function() {
 	});
 	$('.dairy-btn').click(function() {
 			$('#add-dairy-item').slideToggle();
+
 	});
 	$('.pantry-btn').click(function() {
 			$('#add-pantry-item').slideToggle();
 	});
 
 
-// value of input and checkbox displayed
-	$('#add-produce-item').keypress(function(event) {
-		if(event.which == 13) {
-			var newItem = $(this).val();
-			$('.item-entered').show();
-			$('p').text(newItem);
+// add items with checkbox
+	$('.add-item').keypress(function(e) {
+		if(e.which == 13) {
+			$('.item-entered').append('<li><input type=\"checkbox\">' + $(this).val() + '</input></li>');
 		}
 	});
 
@@ -64,7 +51,6 @@ $(document).ready(function() {
 
 
 
-   
 
 // slide toggle for item entered
 

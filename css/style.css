@@ -32,7 +32,7 @@ h1 {
     text-align: center;
 }
 
-.list {
+.main {
     width: 320px;
     padding: 8px;
 
@@ -85,13 +85,15 @@ h1 {
 }
 
 .item-entered {
-    margin: 10px 2px 10px 10px;
+    margin: 10px 5px 10px 10px;
 }
 
-p {
+
+
+/*p {
     display: inline;
 }
-
+*/
 /* Footer styles
     (all the styles inside the < footer > tag)
 */

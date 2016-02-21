@@ -7,14 +7,17 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="list">
+	<div class="main">
+		<header>
+			<h1>Shopping List</h1>
+		</header>
 
-		<h1>Shopping List</h1>
+		<section>
 			<div class="categories">
-				<ul>
+				<ul class="list">
 					<li><button class="btn produce-btn">Produce</button></li>
 					<li><input id="add-produce-item" class="add-item" type="text" placeholder="add item" value=""></input></li>
-					<li><input class="item-entered" type="checkbox" value=""> <p></p> </input></li>
+					<li class="item-entered"></li>
 				</ul>
 				<ul>
 					<li><button class="btn meat-btn">Meat</button></li>
@@ -31,9 +34,12 @@
 				<ul>
 					<li><button class="btn pantry-btn">Pantry</button></li>
 					<li><input id="add-pantry-item" class="add-item" type="text" placeholder="add item" value=""> <p></p> </input></li>	
-				</ul>			
+				</ul>	
+			</div>		
+		</section>
 	</div>
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="js/cart.js"></script>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="js/cart.js"></script>
 </body>
 </html>
