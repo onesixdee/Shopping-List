@@ -15,54 +15,41 @@
 }
 
 
-/* General styles
-    (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
-*/
+/* General styles */
 
-body {
-
+.main {
+    width: 320px;
+    padding: 8px;
 }
 
 li {
     list-style: none;
+
 }
+
+
+/* Header styles */
 
 h1 {
     text-transform: uppercase;
     text-align: center;
 }
 
-.main {
-    width: 320px;
-    padding: 8px;
 
-}
-/* Header styles
-    (all the styles inside the < header > or < nav > tags)
-*/
+/* Content styles */
 
-
-/* Content styles
-*/
-
-.produce-btn,
-.meat-btn,
-.dairy-btn,
-.frozen-btn,
-.pantry-btn,
+.btn,
 .add-item {
-     width: 320px;
+    width: 320px;
     margin-bottom: 5px;
     background-color: #fff;
     text-align: left;
+     background-color: #fff;
+    color: #000;
 }
 
-
-.produce-btn,
-.meat-btn,
-.dairy-btn,
-.frozen-btn,
-.pantry-btn {
+.btn {
+    margin-top: 5px;
     padding: 15px;
     font-size: 20px;
     border: 2px solid #000;
@@ -70,13 +57,9 @@ h1 {
 }
 
 .add-item {
+    display: none;
     padding: 10px;
     border: 2px dotted #000;
-}
-
-.btn-unclicked {
-    background-color: #fff;
-    color: #000;
 }
 
 .btn-clicked {
@@ -85,15 +68,13 @@ h1 {
 }
 
 .item-entered {
-    margin: 10px 5px 10px 10px;
+    margin: 5px;
 }
 
-
-
-/*p {
-    display: inline;
+.checkbox {
+    margin-right: 5px;
 }
-*/
+
 /* Footer styles
     (all the styles inside the < footer > tag)
 */
