@@ -12,23 +12,23 @@
   	// when the enter key is pressed on .add-items, the appended message displays the checkbox and the input valuefrom .add-items
 	  $('.add-item').keypress(function (e) {
 	    if (e.which == 13) {
-	      $(this).parent().append('<li class="item-entered" id="filter"><input type="checkbox" class="checkbox">' + $(this).val() + '</input></li>')
+	      $(this).parent().append('<li class="item-entered btn-content"><input type="checkbox" class="checkbox">' + $(this).val() + '</input></li>')
 	      $(this).val('')
 	    }
   	})
 
-
+	 //close button to hide all contents inside button
 	$('.close').click(function () {
-		$('li').find('#filter').slideUp()
+		$('li').find('.btn-content').slideUp()
 		$('.btn').removeClass('btn-clicked')
 	})
 
 	  // reset
-	  // $('.reset').click(function () {
-	  // 	$('.item-entered').remove()
-	  // 	$('.add-item').remove() 
-	  // 	$('.btn').removeClass('btn-clicked')
-	  // })
+	  $('.reset').click(function () {
+	  	$('.item-entered').remove()
+	  	$('.add-item').remove() 
+	  	$('.btn').removeClass('btn-clicked')
+	  })
 })
 
 
