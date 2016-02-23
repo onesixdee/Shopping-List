@@ -16,7 +16,23 @@
 	      $(this).val('')
 	    }
   	})
+
+
+
+
+
+	  $('.reset').click(function () {
+	  	$('.item-entered').remove()
+	  	$('.add-item').remove() 
+	  	$('.btn').removeClass('btn-clicked')
+	  })
 })
+
+
+
+
+
+
 
 	
 
