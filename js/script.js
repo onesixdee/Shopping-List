@@ -26,7 +26,7 @@
 	  // reset
 	  $('.reset').click(function () {
 	  	$('.item-entered').remove()
-	  	$('.add-item').remove() 
+	  	$('.add-item').slideToggle() 
 	  	$('.btn').removeClass('btn-clicked')
 	  })
 })
