@@ -18,7 +18,8 @@
 /* General styles */
 
 .main {
-    width: 320px;
+    width: 350px;
+    height: 450rem;
     padding: 8px;
 }
 
@@ -39,7 +40,8 @@ h1 {
 /* Content styles */
 
 .btn,
-.add-item {
+.add-item,
+.item-entered {
     width: 320px;
 }
 
@@ -70,40 +72,57 @@ h1 {
     font-size: 18px;
 }
 
+button:hover {
+    background-color: #D1D3D4;
+    
+}
+
 .add-item {
     display: none;
     padding: 5px 10px 5px 10px;
-    border: 2px dotted #000;
+    border: 1px dotted #000;
 }
 
 .btn-clicked {
     padding-top: 5px;
     padding-bottom: 5px;
+    font-size: 16px;
     background-color: #000;
+    border-color: #000;
     color: #fff;
 }
 
-.item-entered {
-    margin: 5px;
+.item-found {
+    text-decoration: line-through;
 }
 
 .checkbox {
-    margin-right: 5px;
+    float: right;
+}
+
+.item-entered {
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+    background-color: #F1F2F2;
 }
 
 .close,
-.reset {
-    margin-right: 10px;
+.reset {    
     padding: 8px;
     font-size: 12px;
     float: left;
 }
 
 .reset {
+    margin-left: 10px;
     background-color: #000;
     color: #fff;
-
 }
+
+
 /* Footer styles
     (all the styles inside the < footer > tag)
 */
