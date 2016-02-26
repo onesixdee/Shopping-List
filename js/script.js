@@ -12,11 +12,27 @@
   	// when the enter key is pressed on .add-items, the appended message displays the checkbox and the input valuefrom .add-items
 	  $('.add-item').keypress(function (e) {
 	    if (e.which == 13) {
-	      $(this).parent().append('<li class="item-entered btn-content">' + '<span>' + $(this).val() + '</span>' + '<input type="checkbox" class="checkbox"></input></li>')
+	      $(this).parent().append('<li class="item-entered btn-content">' + '<span>' + $(this).val() + '</span><input type="checkbox"></input></li>')
 	      $(this).val('')
 	    }
   	})
 
+
+          		/* strikethrough text if checkbox selected */
+	$('#categories').on('change', 'input:checkbox',function () {
+		var item = $(this).closest('li').find('span')
+		if($(this).is(':checked')) {
+			item.addClass('item-found').append('<button class="remove">remove</button>')
+			$(this).closest('input:checkbox').remove()
+		}
+		else{
+			item.removeClass('item-found')
+			
+		}
+	})
+
+      
+	  // $('#categories').sortable();
 
 	 //close button to hide all contents inside button
 	$('.close').click(function () {
@@ -37,7 +53,7 @@
 
 
 		
-	
+
 
 
 
