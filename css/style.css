@@ -227,8 +227,10 @@ input[type="checkbox"],
         border-radius: 0px;
     }
 
-    
-
+    .close,
+    .reset { 
+        padding: 15px;
+    }
 }
 
 /*iPhone portrait*/
