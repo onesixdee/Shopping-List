@@ -14,82 +14,122 @@
     -webkit-padding-end: 0px;
 }
 
-
-/* General styles */
+body {
+    color: white;
+}
 
 .main {
-    width: 350px;
-    height: 450rem;
-    padding: 8px;
+    width: 100%;
+}
+/*******************
+    Header
+*******************/
+
+header {
+    width: 100%;
+    padding: 3rem;
+    background-color: #00A79D;
+}
+
+#logo {
+    width: 10rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: thin;
+    color: #fff;
+}
+
+/*******************
+    Section
+*******************/
+section {
+    width: 100%;
 }
 
 li {
     list-style: none;
-
 }
 
-
-/* Header styles */
-
-h1 {
-    text-transform: uppercase;
-    text-align: center;
+.btn,
+.delete {
+    border-radius: 2px;
 }
-
-
-/* Content styles */
 
 .btn,
 .add-item,
 .item-entered {
-    width: 320px;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.btn {
+    padding: 20px;
+    margin-top: 15px;
+    font-size: 18px;
+    background-color: #D1D3D4;   
+}
+
+button:hover {
+    background-color: #BCBEC0;
+    border-color: #BCBEC0;
+}
+
+.add-item {
+    padding: 10px;
+    border: 1px dotted #82391B;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 
 
 .btn,
 .add-item {
-    margin-bottom: 5px;
     text-align: left;
 }
 
-.btn,
-.add-item,
-.close {
-    color: #000;
+
+.add-item {
+    color: #A7A9AC;
     background-color: #fff;
 }
 
 .btn,
 .close,
 .reset {
-    margin-top: 5px;
-    border: 2px solid #000;
     text-transform: uppercase;
 }
 
-.btn {
-    padding: 15px;
-    font-size: 18px;
-}
-
-button:hover {
-    background-color: #D1D3D4;
-    
-}
-
-.add-item {
-    display: none;
-    padding: 5px 10px 5px 10px;
-    border: 1px dotted #000;
-}
-
 .btn-clicked {
-    padding-top: 5px;
+    padding-top: 15px;
     padding-bottom: 5px;
     font-size: 16px;
-    background-color: #000;
+    background-color: #D1D3D4;
     border-color: #000;
-    color: #fff;
+     color: #fff;
+}
+
+.item-found {
+    text-decoration: line-through;
+    text-decoration-color: #82391B;
+}
+
+.item-entered {
+    padding: 10px;
+    background-color: #CF652D;
+}
+
+.item-entered:nth-child(even) { 
+    background-color: #82391B; 
 }
 
 input[type="checkbox"],
@@ -102,42 +142,93 @@ input[type="checkbox"],
     background-color: #fff;
     padding: 2px 5px;
     font-size: 12px;
-    border: 1px solid #000;
-    border-radius: 2px;
-}
-
-.item-found {
-    text-decoration: line-through;
-}
-
-.item-entered {
-    width: 90%;
-    margin-left: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 2px;
-    /*background-color: #F1F2F2;*/
+    border: 1px solid #fff;
+    color: #00A79D;
 }
 
 .close,
-.reset {    
-    padding: 8px;
+.reset {   
+    width:50%; 
+    margin-top: 10px;
+    padding: 30px;
     font-size: 12px;
     float: left;
 }
 
+.close {
+    background-color: #939598;
+
+}
 .reset {
-    margin-left: 10px;
-    background-color: #000;
+    background-color: #58595B;
     color: #fff;
+
 }
 
 
-/* Footer styles
-    (all the styles inside the < footer > tag)
-*/
+/*ipad lanscape / small laptop*/
+
+@media only screen and (max-width: 1024px) {
+
+    header {
+        padding: 2rem;
+    }
+
+    button {
+        border-radius: 0px;
+    }
+
+    .btn,
+    .add-item,
+    .item-entered {
+        width: 100%;
+    }
 
 
-/* Responsive styles
-    (the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
-*/
+}
+
+/*ipad potrait*/
+
+@media only screen and (max-width: 768px) {
+
+
+    .btn,
+    .add-item,
+    .item-entered {
+        width: 90%;
+    }
+
+    .btn {
+        border-radius: 2px;
+    }
+
+}
+
+
+/*iPhone landscape*/
+
+@media only screen and (max-width: 480px) {
+    .btn,
+    .add-item,
+    .item-entered {
+        width: 100%;
+    }
+
+    .btn {
+        border-radius: 0px;
+    }
+
+}
+
+/*iPhone portrait*/
+
+@media only screen and (max-width: 320px) {
+   
+}
+
+
+
+
+
+
+

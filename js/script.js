@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+$('.add-item').hide()
 
 	// click category buttons and toggle input for add items
 		$('button').click(function () {

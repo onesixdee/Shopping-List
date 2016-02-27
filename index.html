@@ -1,48 +1,65 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="description" content="ShopMato">
+	<meta name="author" content="Diana Duong">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
 	<title>Shopping List by Diana Duong</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 	<div class="main">
 		<header>
-			<h1>Shopping List</h1>
+		<img src="images/shopmato.png" id="logo" alt="Logo">
+			<h1>My Shopping List</h1>
+
 		</header>
 
 		<section>
-			<div>
+			<div class="container">
 				<ul id="categories">
-					<li class="test">
-						<button class="btn">Produce</button>
-						<input class="add-item btn-content" type="text" placeholder="+ add item" value=""></input>
+					<li class="lists">
+						<button class="btn" id="produce">Produce</button>
+						<input class="add-item btn-content" type="text" placeholder="Add a produce item" value=""></input>
 					</li>
-					<li class="test">
+					<li class="lists">
 						<button class="btn">Meat</button>
-						<input  class="add-item btn-content" type="text" placeholder="+ add item" value=""></input>
+						<input  class="add-item btn-content" type="text" placeholder="Add a meat product" value=""></input>
 					</li>
-					<li class="test">
+					<li class="lists">
 						<button class="btn">Dairy</button>
-						<input class="add-item btn-content" type="text" placeholder="+ add item" value=""></input>
+						<input class="add-item btn-content" type="text" placeholder="Add a dairy product" value=""></input>
 					</li>
-					<li class="test">
+					<li class="lists">
 						<button class="btn">Frozen</button>
-						<input class="add-item btn-content" type="text" placeholder="+ add item" value=""></input>
+						<input class="add-item btn-content" type="text" placeholder="Add a frozen item" value=""></input>
 					</li>
-					<li class="test">  
+					<li class="lists">  
 						<button class="btn">Pantry</button>
-						<input class="add-item btn-content" type="text" placeholder="+ add item" value=""></input>
+						<input class="add-item btn-content" type="text" placeholder="Add a pantry item" value=""></input>
 					</li>	
-				</ul>	
+				</ul>
 			</div>	
+		</section>
 
+		<footer>
 			<div>
 				<button class="close">Close</button>
 				<button class="reset">Reset</button>
 			</div>
-		</section>
+		</footer>
+		
 	</div>
 
 <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
