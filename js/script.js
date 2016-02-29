@@ -31,21 +31,23 @@ $('.add-item').hide()
 				$('.add-item').removeClass('error')
 			}
 		})
-	// When you click the button with the class of delete, THIS parent will be removed
+	// When you click the button with the class of delete, THIS parent will be removed. If the add-item has class of error, this will be removed.
 		$('#categories').on('click','.delete', function(){
 			$(this).parent().remove()
 			$('.add-item').removeClass('error')
 		})
-	// When the close all button is clicked, the list with the class btn-content will slideup and btn-clicked class will be removed from the buttons to display the original css style of class btn
+	// When the close all button is clicked, the list with the class btn-content will slideup and btn-clicked class will be removed from the buttons to display the original css style of class btn. If the add-item has class of error, this will be removed.
 		$('.close').click(function () {
 			$('li').find('.btn-content').slideUp()
 			$('.btn').removeClass('btn-clicked')
+			$('.add-item').removeClass('error')
 		})
-	// When the reset button is clicked, all of the list items will be removed, the text input with class add-item will slideup and the btn-clicked class will be removed from the buttons to display the original css style of class btn
+	// When the reset button is clicked, all of the list items will be removed, the text input with class add-item will slideup and the btn-clicked class will be removed from the buttons to display the original css style of class btn. If the add-item has class of error, this will be removed.
 	  	$('.reset').click(function () {
 	  		$('.list-item').remove()
 	  		$('.add-item').slideUp() 
 	  		$('.btn').removeClass('btn-clicked')
+	  		$('.add-item').removeClass('error')
 	  	})
 })
 
