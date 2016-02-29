@@ -14,20 +14,21 @@ $('.add-item').hide()
 	 		  	if ($(this).val().length == 0) {
 	 		  		$(this).addClass('error')
 	 			}
-	 			else {
+	 			else  {
 	      			$(this).parent().append('<li class="list-item btn-content">' + '<span>' + $(this).val() + '</span><input type="checkbox"></input></li>')
 	      			$(this).val('')
 	      			$(this).removeClass('error')
 	    		}
 	  		}
 		})
-	 //When the input checkbox is checked, we will add the class item-found-checked to the closest list item and append a button with the class delete. In addition, once the checkbox is checked, it will be removed and replaced with the delete button
+	 //When the input checkbox is checked, we will add the class item-found-checked to the closest list item and append a button with the class delete. In addition, once the checkbox is checked, it will be removed and replaced with the delete button. If the add-item has class of error, this will be removed.
 		$('#categories').on('change', 'input:checkbox',function () {
 			var item = $(this).closest('li').find('span')
 			if($(this).is(':checked')) {
 				item.addClass('item-found-checked')
 				$(this).closest('.list-item').append('<button class="delete">delete</button>')
 				$(this).closest('input:checkbox').remove()
+				$('.add-item').removeClass('error')
 			}
 		})
 	// When you click the button with the class of delete, THIS parent will be removed
