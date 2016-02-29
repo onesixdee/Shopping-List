@@ -34,6 +34,7 @@ $('.add-item').hide()
 	// When you click the button with the class of delete, THIS parent will be removed
 		$('#categories').on('click','.delete', function(){
 			$(this).parent().remove()
+			$('.add-item').removeClass('error')
 		})
 	// When the close all button is clicked, the list with the class btn-content will slideup and btn-clicked class will be removed from the buttons to display the original css style of class btn
 		$('.close').click(function () {
