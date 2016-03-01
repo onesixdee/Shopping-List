@@ -218,6 +218,10 @@ li {
     .btn {
         padding: 25px;
     }
+
+    .btn-clicked {
+        padding: 15px;
+    }
 }
 
 
