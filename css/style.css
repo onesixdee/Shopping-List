@@ -120,6 +120,7 @@ li button  {
 }
 
 .add-item {
+    display: none;
     border: 1px dotted #82391B;
     color: #A7A9AC;
 }

@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-$('.add-item').hide()
 	// When a button with class btn is clicked, the class btn-clicked will be toggled to change the css of the button as well as display or hide the text input for the class add-item 
 		$('button').click(function () {
 	    	if ($(this).hasClass('btn')) {
