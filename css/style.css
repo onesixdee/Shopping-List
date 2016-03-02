@@ -155,11 +155,16 @@ li {
 
 .delete {
     border-radius: 2px;
-    
     padding: 3px 5px;
     margin-left: 5px;
     font-size: 12px;
     color: #00A79D;
+    font-weight: 500;
+}
+
+.delete:hover {
+    background-color: #00A79D;
+    color: #fff;
 }
 
 .close {
