@@ -1,0 +1,22 @@
+{
+  "name": "shopping_cart",
+  "version": "1.0.0",
+  "description": "Thinkful Shopping Cart Projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onesixdee/Shopping-List.git"
+  },
+  "author": "Diana Duong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onesixdee/Shopping-List/issues"
+  },
+  "homepage": "https://github.com/onesixdee/Shopping-List#readme",
+  "dependencies": {
+    "jquery": "^2.2.4"
+  }
+}

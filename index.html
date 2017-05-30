@@ -1,51 +1,77 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Shopping List by Diana Duong</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<div class="main">
-		<header>
-			<h1>Shopping List</h1>
-		</header>
+	<head>
+	
+		<!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta name="description" content="ShopMato">
+		<meta name="author" content="Diana Duong">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-		<section>
-			<div>
-				<ul id="categories">
-					<li class="test">
-						<button class="btn">Produce</button>
-						<input class="add-item btn-content" type="text" placeholder="+ add item" value=""></input>
-					</li>
-					<li class="test">
-						<button class="btn">Meat</button>
-						<input  class="add-item btn-content" type="text" placeholder="+ add item" value=""></input>
-					</li>
-					<li class="test">
-						<button class="btn">Dairy</button>
-						<input class="add-item btn-content" type="text" placeholder="+ add item" value=""></input>
-					</li>
-					<li class="test">
-						<button class="btn">Frozen</button>
-						<input class="add-item btn-content" type="text" placeholder="+ add item" value=""></input>
-					</li>
-					<li class="test">  
-						<button class="btn">Pantry</button>
-						<input class="add-item btn-content" type="text" placeholder="+ add item" value=""></input>
-					</li>	
-				</ul>	
-			</div>	
+		<title>Shopping List by Diana Duong</title>
 
-			<div>
-				<button class="close">Close</button>
-				<button class="reset">Reset</button>
-			</div>
-		</section>
-	</div>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
 
-<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="js/script.js"></script>
-</body>
+		<!-- Stylesheets -->
+		<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<img src="images/shopmato.png" id="logo" alt="Logo">
+				<h1>My Shopping List</h1>
+			</header>
+
+			<section>
+				<div class="content">
+					<ul id="categories">
+						<li class="list">
+							<button class="btn">Produce</button>
+							<input class="add-item btn-content" type="text" placeholder="add a produce item" value=""></input>
+						</li>
+						<li class="list">
+							<button class="btn">Meat</button>
+							<input  class="add-item btn-content" type="text" placeholder="add a meat product" value=""></input>
+						</li>
+						<li class="list">
+							<button class="btn">Dairy</button>
+							<input class="add-item btn-content" type="text" placeholder="add a dairy product" value=""></input>
+						</li>
+						<li class="list">
+							<button class="btn">Frozen</button>
+							<input class="add-item btn-content" type="text" placeholder="add a frozen item" value=""></input>
+						</li>
+						<li class="list">  
+							<button class="btn">Pantry</button>
+							<input class="add-item btn-content" type="text" placeholder="add a pantry item" value=""></input>
+						</li>	
+					</ul>
+				</div>	
+			</section>
+
+			<section>
+				<div class="content-bottom">
+					<button class="close">Close All</button>
+					<button class="reset">Reset</button>
+				</div>
+			</section>
+
+			<footer class="footer">
+				<ul class="social-icons">
+	              <li><a href="https://github.com/onesixdee" target="_blank"><i class="fa fa-github-square"></i></a></li>
+	              <li><a href="https://twitter.com/onesixdee" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+	              <li><a href="https://linkedin.com/in/dduong013" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+	          </ul>
+				<div class="copyright">&copy; 2016 Diana Duong. <p>A Thinkful Project.<p></div>
+			</footer>
+		</div>
+		<!-- Javascript -->
+		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script src="js/script.js"></script>
+	</body>
 </html>

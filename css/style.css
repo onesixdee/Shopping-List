@@ -14,126 +14,267 @@
     -webkit-padding-end: 0px;
 }
 
-
-/* General styles */
-
-.main {
-    width: 350px;
-    height: 450rem;
-    padding: 8px;
+body {
+    width: 100%;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 1px;
 }
 
-li {
-    list-style: none;
-
+.container{
+    width: 50%;
+    margin-left: 25%;
 }
 
+/*******************
+    Header
+*******************/
 
-/* Header styles */
+header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #00A79D;
+}
+
+#logo {
+    width: 8rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 h1 {
-    text-transform: uppercase;
+    margin-top: 0px;
+    font-size: 32px;
     text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
+/*******************
+    Section
+*******************/
 
-/* Content styles */
-
+section,
 .btn,
 .add-item,
-.item-entered {
-    width: 320px;
+.list-item {
+    width: 100%; 
 }
 
+.btn {
+    padding: 20px;
+    font-size: 20px;  
+}
+
+button:hover {
+   box-shadow: inset 0 0 0 5px #00A79D;
+}
+
+.btn-clicked,
+.add-item,
+.list-item {
+    padding: 10px;
+}
 
 .btn,
 .add-item {
-    margin-bottom: 5px;
     text-align: left;
 }
 
-.btn,
 .add-item,
-.close {
-    color: #000;
+.list-item,
+.close,
+.reset {
+    font-size: 16px;
+}
+
+.add-item,
+.delete {
     background-color: #fff;
+}
+
+.delete,
+input[type="checkbox"] {
+    float: right;
 }
 
 .btn,
 .close,
-.reset {
+.reset,
+.footer {
     margin-top: 5px;
-    border: 2px solid #000;
     text-transform: uppercase;
 }
 
-.btn {
-    padding: 15px;
-    font-size: 18px;
+.close,
+.reset { 
+    margin-bottom: 5px;  
+    display: block;
+    width: 50%; 
+    padding: 20px;
+    font-family: "Raleway", sans-serif;
+    float: left;
 }
 
-button:hover {
-    background-color: #D1D3D4;
-    
+li button  {
+    background-color: #BCBEC0; 
 }
 
 .add-item {
     display: none;
-    padding: 5px 10px 5px 10px;
-    border: 1px dotted #000;
+    border: 1px dotted #82391B;
+    color: #A7A9AC;
+}
+
+.emptyField-error {
+    border: 2px solid #ED1C24;
 }
 
 .btn-clicked {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 16px;
-    background-color: #000;
-    border-color: #000;
-    color: #fff;
+    font-size: 18px;
+    background-color:  #00A79D;
 }
 
-input[type="checkbox"],
-.delete {
-    float: right;
-}
-
-.delete {
-    margin-left: 5px;
-}
-
-.item-found {
+.item-found-checked {
     text-decoration: line-through;
 }
 
-.item-entered {
-    width: 90%;
-    margin-left: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 2px;
-    /*background-color: #F1F2F2;*/
+.list-item {
+    background-color: #CF652D;
 }
 
+.list-item:nth-child(even) { 
+    background-color: #C65220; 
+}
 
-.close,
-.reset {    
-    padding: 8px;
+li {
+    list-style: none;
+}
+
+.delete {
+    border-radius: 2px;
+    padding: 3px 5px;
+    margin-left: 5px;
     font-size: 12px;
-    float: left;
+    color: #00A79D;
+    font-weight: 500;
 }
 
-.reset {
-    margin-left: 10px;
-    background-color: #000;
+.delete:hover {
+    background-color: #00A79D;
     color: #fff;
 }
 
+.close {
+    background-color: #808183;
+}
 
-/* Footer styles
-    (all the styles inside the < footer > tag)
-*/
+.reset {
+    background-color: #5B5C5E;
+}
 
 
-/* Responsive styles
-    (the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
-*/
+/*******************
+    Footer
+*******************/
+.footer {
+    padding-top: 12px;
+    display: block;
+    background-color: #00A79D;
+    width: 100%;
+    height: 4rem;
+    clear: both;
+    color: #fff;
+    text-align: center;
+}
+
+.social-icons li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.social-icons .fa {
+    color: #fff;
+    font-size: 20px;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 10px;
+    letter-spacing: .5px;
+}
+
+.copyright p {
+    display: inline;
+    color: #f9f8f6; 
+}
+
+
+/*ipad lanscape / small laptop*/
+
+@media only screen and (max-width: 1024px) {
+
+    .container {
+        width: 75%;
+        margin-left: 12.5%;
+    }
+    header {
+        padding: 2rem;
+    }
+
+    .btn,
+    .add-item,
+    .list-item {
+        width: 100%;
+    }
+}
+
+/*ipad potrait*/
+@media only screen and (max-width: 768px) {
+
+    .container {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    header {
+        padding: .05rem;
+    }
+
+    #logo {
+        width: 4rem;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .close,
+    .reset { 
+        padding: 20px;
+    }
+}
+
+
+/*iPhone landscape*/
+@media only screen and (max-width: 480px) {    
+
+    .btn {
+        padding: 25px;
+    }
+
+    .btn-clicked {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
