@@ -16,24 +16,24 @@
 
 body {
     width: 100%;
-    color: white;
+    color: #005b55;
     font-family: "Raleway", sans-serif;
     letter-spacing: 1px;
 }
 
-.container{
+.container {
     width: 50%;
     margin-left: 25%;
 }
 
-/*******************
+/********************
     Header
 *******************/
 
 header {
     width: 100%;
     padding: 1rem;
-    background-color: #00A79D;
+    background-color: #d6d7d9;
 }
 
 #logo {
@@ -47,9 +47,9 @@ h1 {
     margin-top: 0px;
     font-size: 32px;
     text-align: center;
-    color: #fff;
+    color: #005b55;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /*******************
@@ -68,8 +68,23 @@ section,
     font-size: 20px;  
 }
 
+li {
+    list-style: none;
+}
+
+li button  {
+    background-color: #d6d7d9; 
+}
+
 button:hover {
-   box-shadow: inset 0 0 0 5px #00A79D;
+   background-color: #005b55;
+   color: #fff;
+}
+
+.btn-clicked {
+    font-size: 18px;
+    color: #fff;
+    background-color: #005b55;
 }
 
 .btn-clicked,
@@ -88,11 +103,6 @@ button:hover {
 .close,
 .reset {
     font-size: 16px;
-}
-
-.add-item,
-.delete {
-    background-color: #fff;
 }
 
 .delete,
@@ -118,23 +128,16 @@ input[type="checkbox"] {
     float: left;
 }
 
-li button  {
-    background-color: #BCBEC0; 
-}
-
 .add-item {
     display: none;
     border: 1px dotted #82391B;
-    color: #A7A9AC;
+    color: #00345b;
+    background-color: #fff;
+    font-weight: 500;
 }
 
 .emptyField-error {
     border: 2px solid #ED1C24;
-}
-
-.btn-clicked {
-    font-size: 18px;
-    background-color:  #00A79D;
 }
 
 .item-found-checked {
@@ -142,15 +145,13 @@ li button  {
 }
 
 .list-item {
-    background-color: #CF652D;
+    background-color: #fff;
+    color: #00345b;
+    font-weight: 500;
 }
 
 .list-item:nth-child(even) { 
-    background-color: #C65220; 
-}
-
-li {
-    list-style: none;
+    background-color: #f0f1f1; 
 }
 
 .delete {
@@ -158,21 +159,24 @@ li {
     padding: 3px 5px;
     margin-left: 5px;
     font-size: 12px;
-    color: #00A79D;
     font-weight: 500;
+    background-color: #00345b;
+    color: #fff;
+
 }
 
 .delete:hover {
-    background-color: #00A79D;
-    color: #fff;
+    background-color: #002542;
 }
 
 .close {
-    background-color: #808183;
+    background-color: #d6d7d9;
+    font-weight: 500;
 }
 
 .reset {
-    background-color: #5B5C5E;
+    background-color: #c9cbcc;
+    font-weight: 500;
 }
 
 
@@ -182,12 +186,13 @@ li {
 .footer {
     padding-top: 12px;
     display: block;
-    background-color: #00A79D;
+    background-color: #d6d7d9;
     width: 100%;
     height: 4rem;
     clear: both;
-    color: #fff;
+    color: #005b55;
     text-align: center;
+    font-weight: 600;
 }
 
 .social-icons li {
@@ -196,7 +201,7 @@ li {
 }
 
 .social-icons .fa {
-    color: #fff;
+    color: #005b55;
     font-size: 20px;
 }
 
@@ -204,12 +209,9 @@ li {
     margin-top: 10px;
     font-size: 10px;
     letter-spacing: .5px;
-}
-
-.copyright p {
-    display: inline;
-    color: #f9f8f6; 
-}
+    color: #005b55;
+    font-weight: 500;
+ }
 
 
 /*ipad lanscape / small laptop*/
