@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+$(document).ready(function() {
 	// When a button with class btn is clicked, the class btn-clicked will be toggled to change the css of the button as well as display or hide the text input for the class add-item 
 		$('button').click(function () {
 	    	if ($(this).hasClass('btn')) {
@@ -8,7 +8,7 @@ $(document).ready(function () {
 	    	}
 	  	})
   	// When you hit enter on a class of add items it triggers an event as E. Then we check that it matches up to keycode 13 for enter. If the length of the value is equal to 0, the class emptyField will be added changing the border color to red. Otherwise,  we append to the object of THIS parent with the value and then blank it out for the next input you will type. The class emptyField-error will be removed if it was previously triggered due to the empty value of listItem.
-	 	$('.add-item').keypress(function (e) {
+	 	$('.add-item').keypress(function(e) {
     		var listItem = $(this).val()
 	    	if (e.which == 13) {
 	      		if (listItem) {
@@ -22,7 +22,7 @@ $(document).ready(function () {
 	    	}
 	  	})
 	 //When the input checkbox is checked, we will add the class item-found-checked to the closest list item and append a button with the class delete. In addition, once the checkbox is checked, it will be removed and replaced with the delete button. The class emptyField-error will be removed from the class add-item if it was previously triggered due to an empty value.
-		$('#categories').on('change', 'input:checkbox',function () {
+		$('#categories').on('change', 'input:checkbox',function() {
 			var item = $(this).closest('li').find('span')
 			if($(this).is(':checked')) {
 				item.addClass('item-found-checked')
