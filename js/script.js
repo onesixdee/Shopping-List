@@ -1,4 +1,4 @@
-jQuery(function ($) {
+$(document).ready(function () {
 "use strict";
 
   // When a button is clicked
