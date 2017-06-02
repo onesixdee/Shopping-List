@@ -1,64 +1,89 @@
+jQuery(function ($) {
+"use strict";
 
-$(document).ready(function() {
-	// When a button with class btn is clicked, the class btn-clicked will be toggled to change the css of the button as well as display or hide the text input for the class add-item 
-		$('button').click(function () {
-	    	if ($(this).hasClass('btn')) {
-	      			$(this).toggleClass('btn-clicked')
-	      			$(this).siblings().slideToggle()
-	    	}
-	  	})
-  	// When you hit enter on a class of add items it triggers an event as E. Then we check that it matches up to keycode 13 for enter. If the length of the value is equal to 0, the class emptyField will be added changing the border color to red. Otherwise,  we append to the object of THIS parent with the value and then blank it out for the next input you will type. The class emptyField-error will be removed if it was previously triggered due to the empty value of listItem.
-	 	$('.add-item').keypress(function(e) {
-    		var listItem = $(this).val()
-	    	if (e.which == 13) {
-	      		if (listItem) {
-	        		$(this).parent().append('<li class="list-item btn-content">' + '<span>' + listItem + '</span><input type="checkbox"></input></li>')
-	        		$(this).val('')
-	        		$(this).removeClass('emptyField-error')
-	      		} 	
-	      		else {
-	        		$(this).addClass('emptyField-error')
-	      		}
-	    	}
-	  	})
-	 //When the input checkbox is checked, we will add the class item-found-checked to the closest list item and append a button with the class delete. In addition, once the checkbox is checked, it will be removed and replaced with the delete button. The class emptyField-error will be removed from the class add-item if it was previously triggered due to an empty value.
-		$('#categories').on('change', 'input:checkbox',function() {
-			var item = $(this).closest('li').find('span')
-			if($(this).is(':checked')) {
-				item.addClass('item-found-checked')
-				$(this).closest('.list-item').append('<button class="delete">delete</button>')
-				$(this).closest('input:checkbox').remove()
-				$('.add-item').removeClass('emptyField-error')
-			}
-		})
-	// When you click the button with the class of delete, THIS parent will be removed. The class emptyField-error will be removed from the class add-item if it was previously triggered due to an empty value.
-		$('#categories').on('click','.delete', function(){
-			$(this).parent().remove()
-			$('.add-item').removeClass('emptyField-error')
-		})
-	// When the close all button is clicked, the list with the class btn-content will slideup and btn-clicked class will be removed from the buttons to display the original css style of class btn. The class emptyField-error will be removed from the class add-item if it was previously triggered due to an empty value.
-		$('.close').click(function () {
-			$('li').find('.btn-content').slideUp()
-			$('.btn').removeClass('btn-clicked')
-			$('.add-item').removeClass('emptyField-error')
-		})
-	// When the reset button is clicked, all of the list items will be removed, the text input with class add-item will slideup and the btn-clicked class will be removed from the buttons to display the original css style of class btn. The class emptyField-error will be removed from the class add-item if it was previously triggered due to an empty value.
-	  	$('.reset').click(function () {
-	  		$('.list-item').remove()
-	  		$('.add-item').slideUp() 
-	  		$('.btn').removeClass('btn-clicked')
-	  		$('.add-item').removeClass('emptyField-error')
-	  	})
-})
+  // When a button is clicked
+  $("button").click(function () {
+    // and has a class of btn
+    if ($(this).hasClass("btn")) {
+      // toggle class btn to class btn-clicked which will change the style of the button
+      $(this).toggleClass("btn-clicked");
+      // then slide toggle to either display the user input with class add-item if hidden (or hide if displayed)
+      $(this).siblings().slideToggle();
+    }
+  });
 
+// When enter key is pressed on the input field with class add items, trigger the event(e)
+  $(".add-item").keypress(function (e) {
+    // a variable that holds the user's input
+    var listItem = $(this).val();
+    // if the keypress is strictly equal to the enter key
+    if (e.which === 13) {
+      // and if there is a user input (listItem)
+      if (listItem) {
+        // append the listItem to the input field (the parent)
+        $(this).parent().append("<li class='list-item btn-content'>" + "<span>" + listItem + "</span><input type='checkbox'></input></li>");
+        // then clear out the input field
+        $(this).val("");
+        // and remove the class emptyField-error if it was previously triggered due to the empty value of listItem
+        $(this).removeClass("emptyField-error");
+      } else {
+        // otherewise, if the length of the value is equal to 0, add class emptyField-error to this listItem, which adds a red border
+        $(this).addClass("emptyField-error");
+      }
+    }
+  });
+
+// When there is a change to a checkbox in the unordered list with an id of categories
+ $("#categories").on("change", "input:checkbox", function () {
+  // a variable called item that finds the closest list with a span tag holding the listItem
+   var item = $(this).closest("li").find("span");
+   // and if a checkbox is checked
+   if ($(this).is(":checked")) {
+     //add the class item-found-checked to the closest list item
+     $(item).addClass("item-found-checked");
+     //append a button with the class delete
+     $(this).closest(".list-item").append("<button class='delete'>delete</button>");
+     // and remove the checkbox
+     $(this).closest("input:checkbox").remove();
+     //also remove the class emptyField-error from the class add-item if previously triggered due to an empty value
+     $(".add-item").removeClass("emptyField-error");
+   }
+ });
 
 
+ // When you click the button with the class of delete
+ $("#categories").on("click", ".delete", function () {
+   // remove this parent (user input)
+   $(this).parent().remove();
+   // remove class emptyField-error from the class add-item if it was previously triggered due to an empty value
+   $(".add-item").removeClass("emptyField-error");
+ });
 
 
-		
+ // When the close all button is clicked
+ $(".close").click(function () {
+  // the list with the class btn-content will slideup to hide all of the list
+   $("li").find(".btn-content").slideUp();
+   // remove class btn-clicked from the buttons to display the original css style of buttons with class btn
+   $(".btn").removeClass("btn-clicked");
+   // remove class emptyField-error from the class add-item if it was previously triggered due to an empty value
+   $(".add-item").removeClass("emptyField-error");
+ });
 
 
+ // When the reset button is clicked
+ $(".reset").click(function () {
+   // remove all of the li's with class list-item
+   $(".list-item").remove();
+   // slide up all of the input field with the class add-item
+   $(".add-item").slideUp();
+   //  remove the class btn-clicked from the buttons to display the original css style of the button with class btn
+   $(".btn").removeClass("btn-clicked");
+   // remove class emptyField-error from the class add-item if it was previously triggered due to an empty value
+   $(".add-item").removeClass("emptyField-error");
+ });
 
+});
 
 
 
